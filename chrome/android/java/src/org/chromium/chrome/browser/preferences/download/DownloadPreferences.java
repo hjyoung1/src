@@ -142,7 +142,7 @@ public class DownloadPreferences
                     List<ResolveInfo> resInfo = getActivity().getPackageManager().queryIntentActivities(shareIntent, 0);
                     if (!resInfo.isEmpty()) {
                         for (ResolveInfo info : resInfo) {
-                            if (!"com.kiwibrowser.browser".equalsIgnoreCase(info.activityInfo.packageName)) {
+                            if (!"com.kiwibrowser.mod".equalsIgnoreCase(info.activityInfo.packageName)) {
                                 Intent targetedShare = new Intent(android.content.Intent.ACTION_VIEW);
                                 targetedShare.setPackage(info.activityInfo.packageName.toLowerCase(Locale.ROOT));
                                 targetedShareIntents.add(targetedShare);
