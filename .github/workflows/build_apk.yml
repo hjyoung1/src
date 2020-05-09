@@ -151,7 +151,7 @@ jobs:
         run: sccache --show-stats
 
       - name: Uploading APK
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          name: apk-${{ matrix.platform }}
-          path: ./secondary_disk/out/android_${{ matrix.platform }}/apks/
+          name: kiwi-${{ matrix.platform }}.apk
+          path: ./secondary_disk/out/android_${{ matrix.platform }}/apks/ChromePublic.apk
